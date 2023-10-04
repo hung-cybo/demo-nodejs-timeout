@@ -1,4 +1,5 @@
 const axios = require('axios');
+// import {AxiosError} from 'axios';
 
 (async function getPosts() {
   try {
@@ -8,6 +9,7 @@ const axios = require('axios');
         headers: {
           Accept: 'application/json',
         },
+          clarifyTimeoutError: true,
         timeout: 1,
       }
     );
